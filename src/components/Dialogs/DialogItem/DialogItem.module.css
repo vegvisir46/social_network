@@ -1,0 +1,23 @@
+.dialog a {
+    text-decoration: none;
+    color: #102fad;
+    transition: all 0.5s ease 0s;
+}
+
+.dialog a:visited {
+    color: #102fad;
+}
+
+.dialog a:hover {
+    color: #585CC6;
+}
+
+.dialog a.active {
+    color: deeppink;
+    font-size: 20px;
+
+}
+
+.big {
+    /*transform: scale(1.3);*/
+}

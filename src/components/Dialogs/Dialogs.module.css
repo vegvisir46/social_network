@@ -1,0 +1,25 @@
+.title{
+    font-size: 20px;
+    padding: 5px 0 5px 15px;
+    color: #403f44;
+}
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsItems {
+    padding: 10px;
+    color: #102fad;
+}
+
+/*.dialogsItems .active {*/
+/*    color: #a59dbd;*/
+/*}*/
+
+
+
+.messages {
+    padding: 10px;
+}

@@ -4,11 +4,35 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let postsData = [
+    {id: 1, message: "First post", likesCount: 16},
+    {id: 2, message: "Second post", likesCount: 23},
+    {id: 3, message: "Third post", likesCount: 42}
+];
+
+let dialogsData = [
+    {id: 1, name: "Michael"},
+    {id: 2, name: "Jim"},
+    {id: 3, name: "Dwight"},
+    {id: 4, name: "Oscar"},
+    {id: 5, name: "Stanley"}
+];
+
+let messagesData = [
+    {id: 1, message: "Hoooo..."},
+    {id: 2, message: "...ooooh..."},
+    {id: 3, message: "...boi..."}
+];
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <App
+            postsData={postsData}
+            dialogsData={dialogsData}
+            messagesData={messagesData}
+        />
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

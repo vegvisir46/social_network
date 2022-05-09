@@ -1,0 +1,21 @@
+.header {
+    grid-area: header;
+    background-color: #585CC6;
+    border-radius: 5px;
+    margin: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.search {
+}
+
+.searchBtn {
+    margin: 0 0 0 5px;
+}

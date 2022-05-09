@@ -1,0 +1,21 @@
+/*.content {*/
+/*    grid-area: c;*/
+/*    background-color: #e4e6f8;*/
+/*    border-radius: 5px;*/
+/*    margin: 1px;*/
+/*}*/
+
+.banner {
+    height: 100px;
+    overflow: hidden;
+}
+
+.wrapper {
+    padding: 25px 30px;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 5px;
+}
+

@@ -17,7 +17,7 @@ const Profile = (props) => {
             <div className={styles.wrapper}>
 
                 <ProfileInfo/>
-                <MyPosts postsData={props.postsData} />
+                <MyPosts postsData={props.state.postsData} />
 
             </div>
 

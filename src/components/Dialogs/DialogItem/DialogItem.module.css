@@ -1,4 +1,15 @@
+.dialog {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.dialog img{
+    height:50px
+}
+
 .dialog a {
+    padding: 0 0 0 10px;
     text-decoration: none;
     color: #102fad;
     transition: all 0.5s ease 0s;

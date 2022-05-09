@@ -3,8 +3,6 @@ import styles from './Profile.module.css'
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-
-
 const Profile = (props) => {
     return (
         <div>
@@ -17,10 +15,10 @@ const Profile = (props) => {
             <div className={styles.wrapper}>
 
                 <ProfileInfo/>
-                <MyPosts postsData={props.state.postsData} />
+                <MyPosts postsData={props.state.postsData}
+                         addPost={props.addPost}/>
 
             </div>
-
         </div>
     );
 };

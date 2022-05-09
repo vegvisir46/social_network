@@ -19,3 +19,13 @@
     display: flex;
     justify-content: flex-end;
 }
+.postsBtn button {
+    border: #102fad solid 2px;
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+.postsBtn button:hover {
+    background-color: #d7d9e7;
+}

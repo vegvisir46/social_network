@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Message.module.css";
+import styles from "./Message.module.css";
 
 
 const Message = (props) => {
@@ -10,15 +10,15 @@ const Message = (props) => {
 
     if (props.dir === "in") {
         return (
-            <div className={s.messageIn}>
-                <div className={s.message}>{props.message}</div>
+            <div className={styles.messageIn}>
+                <div className={styles.message}>{props.message}</div>
             </div>
 
         )
     } else if (props.dir === "out") {
         return (
-            <div className={s.messageOut}>
-                <div className={s.message}>{props.message}</div>
+            <div className={styles.messageOut}>
+                <div className={styles.message}>{props.message}</div>
             </div>
         )
     }

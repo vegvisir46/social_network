@@ -22,7 +22,7 @@
 }
 
 .message {
-    border: #585CC6 solid 1px;
+    border: rgba(88, 92, 198, 0.52) solid 1px;
     border-radius: 20px;
     padding: 5px;
     max-width: 100px;

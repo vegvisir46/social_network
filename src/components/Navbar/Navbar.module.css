@@ -3,7 +3,10 @@
     border-radius: 5px;
     background-color: #d7d0ff;
     margin: 1px;
-    height: 240px;
+    height: 500px;
+}
+.items {
+    margin: 0 0 50px 0;
 }
 
 .item {
@@ -30,4 +33,40 @@
 
 .item a.active {
     color: #726f8d;
+}
+
+
+.sitebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 20px;
+    color: #102fad;
+    margin: 0 0 10px 0;
+}
+
+.persons {
+    display: flex;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.person:not(:last-child) {
+    margin: 0 5px 0 0;
+}
+
+.person img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.name {
+
 }

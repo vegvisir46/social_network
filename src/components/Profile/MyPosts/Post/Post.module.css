@@ -2,16 +2,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 20px;
+    background-color: #d7d0ff;
+    padding: 6px 10px;
+    margin: 0 0 10px 0;
 }
 
 .postData {
     display: flex;
-    margin: 0 0 5px 0;
     align-items: center;
 }
 
 .postItem img{
     width: 50px;
+    border-radius: 50%;
 }
 
 .postItem:not(:last-child) {

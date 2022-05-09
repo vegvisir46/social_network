@@ -1,3 +1,29 @@
-.message {
+.messageIn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 20px 0;
+}
+.messageIn:after {
+    content: "•";
+    color: cornflowerblue;
+    margin: 6px;
 }
 
+.messageOut {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 0 20px 0;
+}
+
+.messageOut:before {
+    content: "•";
+    color: cornflowerblue;
+    margin: 6px;
+}
+
+.message {
+    border: #585CC6 solid 1px;
+    border-radius: 20px;
+    padding: 5px;
+    max-width: 100px;
+}

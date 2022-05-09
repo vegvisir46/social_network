@@ -17,14 +17,20 @@ let state = {
             {id: 6, name: "Creed"}
         ],
         messagesData: [
-            {id: 1, message: "Hoooo..."},
-            {id: 2, message: "...ooooh..."},
-            {id: 3, message: "...ooooh..."},
-            {id: 4, message: "...ooooh..."},
-            {id: 5, message: "...ooooh..."},
-            {id: 6, message: "...boi..."}
+            {id: 1, message: "Hoooo...", dir: "in"},
+            {id: 2, message: "...ooooh...", dir: "out"},
+            {id: 3, message: "...ooooh...", dir: "in"},
+            {id: 4, message: "...ooooh...", dir: "out"},
+            {id: 5, message: "...ooooh...", dir: "in"},
+            {id: 6, message: "...boi...", dir: "out"}
         ]
-    }
+    },
+
+    sitebar: [
+        {id: 1, name: "Michael", imgSrc: "michael"},
+        {id: 2, name: "Jim", imgSrc: "jim"},
+        {id: 3, name: "Dwight", imgSrc: "dwight"}
+    ]
 }
 
 export default state;

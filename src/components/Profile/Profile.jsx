@@ -15,8 +15,9 @@ const Profile = (props) => {
             <div className={styles.wrapper}>
 
                 <ProfileInfo/>
-                <MyPosts postsData={props.state.postsData}
-                         addPost={props.addPost}/>
+                <MyPosts postsData={props.profilePage.postsData}
+                         newPostText={props.profilePage.newPostText}
+                         dispatch={props.dispatch} />
 
             </div>
         </div>

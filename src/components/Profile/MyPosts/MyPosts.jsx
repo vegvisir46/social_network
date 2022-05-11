@@ -1,8 +1,9 @@
 import React from "react";
 import styles from './MyPosts.module.css'
 import Post from "./Post/Post";
-import {addPostActionCreator} from "../../../redux/state";
-import {updateNewPostTextActionCreator} from "../../../redux/state";
+import {
+    addPostActionCreator, updateNewPostTextActionCreator
+} from "../../../redux/profile-reducer";
 
 const MyPosts = (props) => {
 
@@ -26,7 +27,7 @@ const MyPosts = (props) => {
                 <div className={styles.postsTitle}>Posts</div>
                 <input
                     ref={newPostElement}
-                    onChange={ onPostChange }
+                    onChange={onPostChange}
                     className={styles.postsInput}
                     type="text"
                     value={props.newPostText}/>

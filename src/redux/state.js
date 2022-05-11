@@ -66,24 +66,6 @@ let store = {
 
 }
 
-export const addPostActionCreator = () => { // позже в одну строку
-    return {
-        type: ADD_POST
-    }
-};
-export const updateNewPostTextActionCreator = (text) => {
-    return {type: UPDATE_NEW_POST_TEXT, newText: text}
-};
-
-export const addMessageActionCreator = () => { // позже в одну строку
-    return {
-        type: ADD_MESSAGE
-    }
-};
-export const updateNewMessageBodyActionCreator = (body) => {
-    return {type: UPDATE_NEW_MESSAGE_BODY, newBody: body}
-};
-
 export default store;
 
 window.store = store;

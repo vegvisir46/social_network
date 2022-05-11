@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 const Navbar = (props) => {
 
-    let person = props.sitebar.map(person => {
+    let person = props.sidebar.map(person => {
         return (
             <div className={styles.person}>
                 <img src="https://i.pinimg.com/736x/85/46/93/85469324181dad81347927212d54c9c8.jpg" alt=""/>
@@ -33,7 +33,7 @@ const Navbar = (props) => {
                 </div>
             </div>
 
-            <div className={styles.sitebar}>
+            <div className={styles.sidebar}>
                 <div className={styles.title}>Friends</div>
                 <div className={styles.persons}>
                     {person}

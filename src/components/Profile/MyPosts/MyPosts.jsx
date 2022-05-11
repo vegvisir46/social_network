@@ -27,7 +27,6 @@ const MyPosts = (props) => {
                 <input
                     ref={newPostElement}
                     onChange={ onPostChange }
-                    // placeholder="your news..."
                     className={styles.postsInput}
                     type="text"
                     value={props.newPostText}/>

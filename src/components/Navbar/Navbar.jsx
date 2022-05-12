@@ -7,15 +7,15 @@ const Navbar = (props) => {
     return (
         <StoreContext.Consumer>
             {(store) => {
-                let state = store.getState();
-                let person = state.sidebar.map(person => {
-                    return (
-                        <div className={styles.person}>
-                            <img src="https://i.pinimg.com/736x/85/46/93/85469324181dad81347927212d54c9c8.jpg" alt=""/>
-                            <div className={styles.name}>{person.name}</div>
-                        </div>
-                    )
-                });
+                // let state = store.getState();
+                // let person = state.sidebar.map(person => {
+                //     return (
+                //         <div className={styles.person}>
+                //             <img src="https://i.pinimg.com/736x/85/46/93/85469324181dad81347927212d54c9c8.jpg" alt=""/>
+                //             <div className={styles.name}>{person.name}</div>
+                //         </div>
+                //     )
+                // });
 
                 return (
                     <nav className={styles.nav}>
@@ -37,12 +37,12 @@ const Navbar = (props) => {
                             </div>
                         </div>
 
-                        <div className={styles.sidebar}>
-                            <div className={styles.title}>Friends</div>
-                            <div className={styles.persons}>
-                                {person}
-                            </div>
-                        </div>
+                        {/*<div className={styles.sidebar}>*/}
+                        {/*    <div className={styles.title}>Friends</div>*/}
+                        {/*    <div className={styles.persons}>*/}
+                        {/*        {person}*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
 
                     </nav>
                 )

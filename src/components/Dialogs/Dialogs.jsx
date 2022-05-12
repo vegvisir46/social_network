@@ -5,10 +5,10 @@ import DialogItem from "./DialogItem/DialogItem";
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.dialogsData
+    let dialogsElements = props.messagesPage.dialogsData
         .map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
 
-    let messagesElements = props.messagesData
+    let messagesElements = props.messagesPage.messagesData
         .map(message => <Message message={message.message} id={message.id} dir={message.dir}/>);
 
     let sendMessage = () => {
@@ -33,7 +33,7 @@ const Dialogs = (props) => {
                         onChange={onMessageChange}
                         className={styles.textArea}
                         name="" id="" cols="10" rows="5"
-                        value={props.newMessageBody}/>
+                        value={props.messagesPage.newMessageBody}/>
                     <div className={styles.sendBtn}>
                         <button onClick={sendMessage}>Send Message</button>
                     </div>

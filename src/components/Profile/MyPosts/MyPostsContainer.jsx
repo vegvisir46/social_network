@@ -6,35 +6,6 @@ import {
 // import StoreContext from "../../../StoreContext";
 import {connect} from "react-redux";
 
-
-// const MyPostsContainer = (props) => {
-//
-//
-//     return (
-//         <StoreContext.Consumer>
-//             {(store) => {
-//                 let state = store.getState();
-//
-//                 let onAddPost = () => {
-//                     store.dispatch(addPostActionCreator());
-//                 };
-//
-//                 let onPostChange = (text) => {
-//                     store.dispatch(updateNewPostTextActionCreator(text));
-//                 };
-//
-//                 return (
-//                     <MyPosts updateNewPostText={onPostChange}
-//                              addPost={onAddPost}
-//                              postsData={state.profilePage.postsData}
-//                              newPostText={state.profilePage.newPostText}/>
-//                 )
-//             }
-//             }
-//         </StoreContext.Consumer>
-//     );
-// };
-
 let mapStateToProps = (state) => {
     return {
         profilePage: state.profilePage

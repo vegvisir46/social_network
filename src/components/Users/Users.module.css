@@ -1,0 +1,62 @@
+.users {
+    display: flex;
+    /*justify-content: space-between;*/
+    margin: 0 0 20px 40px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+
+}
+
+.userPhoto {
+    width: 100px;
+    height: 100px;
+}
+
+.follow {
+
+}
+
+.right {
+    margin: 0 0 0 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    border: solid 1px grey;
+    border-radius: 20px;
+}
+
+.nameStatus {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 20px;
+}
+
+.name {
+    margin: 0 0 50px 0;
+}
+
+.status {
+
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px 0 0;
+}
+
+.city {
+    margin: 0 0 50px 0;
+}
+
+.country {
+
+}

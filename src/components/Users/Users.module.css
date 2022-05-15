@@ -60,3 +60,9 @@
 .country {
 
 }
+
+.weather {
+    border:none;
+    width: 160px;
+    height: 90px;
+}

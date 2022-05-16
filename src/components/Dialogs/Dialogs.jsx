@@ -14,6 +14,18 @@ class Dialogs extends React.Component {
         this.props.onMessageChange(body);
     }
 
+    // componentDidMount() {
+    //     alert('Mount');
+    // }
+    //
+    // componentWillUnmount() {
+    //     alert('Unmount');
+    // }
+    //
+    // componentDidUpdate() {
+    //     alert('Update');
+    // }
+
     render() {
         let dialogsElements = this.props.messagesPage.dialogsData
             .map(dialog => <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>);

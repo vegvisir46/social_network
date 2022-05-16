@@ -5,9 +5,23 @@ import * as axios from "axios";
 
 class Users extends React.Component {
 
-    constructor(props) {
-        super(props);
-        console.log(this.props.users.length)
+    // constructor(props) {
+    //     super(props);
+    //     console.log(this.props.users.length)
+    //
+    //     if (this.props.users.length === 0) {
+    //
+    //         axios.get("https://social-network.samuraijs.com/api/1.0/users")
+    //             .then(response => {
+    //                 this.props.setUsers(response.data.items);
+    //             });
+    //     }
+    //
+    // }
+
+    componentDidMount() {
+        alert('Mount');
+
         if (this.props.users.length === 0) {
 
             axios.get("https://social-network.samuraijs.com/api/1.0/users")
@@ -15,6 +29,14 @@ class Users extends React.Component {
                     this.props.setUsers(response.data.items);
                 });
         }
+    }
+
+    componentWillUnmount() {
+        alert('Unmount');
+    }
+
+    componentDidUpdate() {
+        alert('Update');
     }
 
     render() {

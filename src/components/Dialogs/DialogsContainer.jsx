@@ -10,17 +10,20 @@ let mapStateToProps = (state) => {
     };
 };
 
-let mapDispatchToProps = (dispatch) => {
-    return {
-        onMessageChange: (text) => {
-            dispatch(updateNewMessageBodyActionCreator(text));
-        },
-        sendMessage: () => {
-            dispatch(addMessageActionCreator());
-        }
-    };
-};
+// let mapDispatchToProps = (dispatch) => {
+//     return {
+//         onMessageChange: (text) => {
+//             dispatch(updateNewMessageBodyActionCreator(text));
+//         },
+//         sendMessage: () => {
+//             dispatch(addMessageActionCreator());
+//         }
+//     };
+// };
 
-const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
+const DialogsContainer = connect(mapStateToProps, {
+    onMessageChange: updateNewMessageBodyActionCreator,
+    sendMessage: addMessageActionCreator
+})(Dialogs);
 
 export default DialogsContainer;

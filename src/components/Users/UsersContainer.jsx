@@ -26,7 +26,7 @@ class UsersContainer extends React.Component {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
                 // ===== Получение числа пользователей с сервера =====
-                //this.props.setTotalUsersCount(response.data.totalCount);
+                // this.props.setTotalUsersCount(response.data.totalCount);
             });
         // }
     }

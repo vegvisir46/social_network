@@ -22,6 +22,9 @@ ReactDOM.render(
 reportWebVitals();
 
 
+// SWITCH R-R-D (last 6.3.0)
+// npm uninstall react-router-dom
+// npm i react-router-dom@5.2.0
 
 
 

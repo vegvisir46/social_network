@@ -14,4 +14,6 @@ let reducers = combineReducers({
 
 let store = legacy_createStore(reducers);
 
+window.store = store; // для дебага
+
 export default store;

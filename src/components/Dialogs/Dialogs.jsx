@@ -4,7 +4,6 @@ import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
 
 class Dialogs extends React.Component {
-
     sendMessage = () => {
         this.props.sendMessage();
     }

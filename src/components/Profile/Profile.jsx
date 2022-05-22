@@ -4,6 +4,7 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
+
     return (
         <div>
             <div className={styles.banner}>
@@ -13,8 +14,7 @@ const Profile = (props) => {
             </div>
 
             <div className={styles.wrapper}>
-
-                <ProfileInfo/>
+                <ProfileInfo profile={props.profile} />
                 <MyPostsContainer />
             </div>
         </div>

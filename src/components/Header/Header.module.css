@@ -9,11 +9,17 @@
     padding: 0 10px 0 10px;
 }
 
+.leftZone {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     width: 40px;
 }
 
 .search {
+    margin: 0 0 0 20px;
 }
 
 .searchBtn {

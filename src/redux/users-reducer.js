@@ -4,7 +4,7 @@
 // {id: 4, photoUrl:'', followed: true, fullName: 'Oscar', status: 'I am boss', location: {city: 'New-York', country: 'USA'}}
 
 
-import {followAPI, getUsersAPI, unfollowAPI} from "../api/api";
+import {usersAPI} from "../api/api";
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -88,7 +88,7 @@ export const toggleFollowingProgress = (isFetching, userId) => ({
 export const getUsers = (currentPage, pageSize) => {
     return (dispatch) => {
         dispatch(toggleIsFetching(true));
-        getUsersAPI(currentPage, pageSize)
+        usersAPI.getUsers(currentPage, pageSize)
             .then(response => {
                 dispatch(toggleIsFetching(false));
                 dispatch(setUsers(response.items));
@@ -102,7 +102,7 @@ export const onPageChanged = (pageNumber, pageSize) => {
         dispatch(setCurrentPage(pageNumber));
         dispatch(setUsers([]));
         dispatch(toggleIsFetching(true));
-        getUsersAPI(pageNumber, pageSize)
+        usersAPI.getUsers(pageNumber, pageSize)
             .then(response => {
                 dispatch(toggleIsFetching(false));
                 dispatch(setUsers(response.items));
@@ -112,7 +112,7 @@ export const onPageChanged = (pageNumber, pageSize) => {
 export const follow = (userId) => {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-        followAPI(userId)
+        usersAPI.follow(userId)
             .then(response => {
                 if (response.data.resultCode === 0) {
                     dispatch(followSuccess(userId));
@@ -124,7 +124,7 @@ export const follow = (userId) => {
 export const unfollow = (userId) => {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-        unfollowAPI(userId)
+        usersAPI.unfollow(userId)
             .then(response => {
                 if (response.data.resultCode === 0) {
                     dispatch(unfollowSuccess(userId));

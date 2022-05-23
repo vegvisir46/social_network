@@ -2,6 +2,7 @@ import React from "react";
 import styles from './Dialogs.module.css';
 import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
+import {Redirect} from "react-router-dom";
 
 class Dialogs extends React.Component {
     sendMessage = () => {
@@ -13,23 +14,14 @@ class Dialogs extends React.Component {
         this.props.onMessageChange(body);
     }
 
-    // componentDidMount() {
-    //     alert('Mount');
-    // }
-    //
-    // componentWillUnmount() {
-    //     alert('Unmount');
-    // }
-    //
-    // componentDidUpdate() {
-    //     alert('Update');
-    // }
-
     render() {
         let dialogsElements = this.props.messagesPage.dialogsData
             .map(dialog => <DialogItem name={dialog.name} key={dialog.id} id={dialog.id}/>);
         let messagesElements = this.props.messagesPage.messagesData
             .map(message => <Message message={message.message} key={message.id} id={message.id} dir={message.dir}/>);
+
+        // Проверка авторизации
+        if (!this.props.isAuth) {return <Redirect to={"/login"}/>}
 
         return (
             <div>

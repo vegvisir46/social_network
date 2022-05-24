@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./ProfileInfo.module.css";
 import undUserPhoto from '../../img/jim.jpg'
 import Preloader from "../../common/Preloader";
+import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -27,6 +28,9 @@ const ProfileInfo = (props) => {
                     </div>
                     <div className={styles.descrItem}>
                         Web Site: {props.profile.contacts.github}
+                    </div>
+                    <div className={styles.descrItem}>
+                        Status: <ProfileStatus status={'Hi i`m status'}/>
                     </div>
                 </div>
             </div>

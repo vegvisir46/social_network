@@ -30,7 +30,8 @@ const ProfileInfo = (props) => {
                         Web Site: {props.profile.contacts.github}
                     </div>
                     <div className={styles.descrItem}>
-                        Status: <ProfileStatus status={'Hi i`m status'}/>
+                        Status: <ProfileStatus status={props.status}
+                                               updateStatus={props.updateStatus}/>
                     </div>
                 </div>
             </div>

@@ -70,17 +70,21 @@ export const getUserProfile = (userId) => {
 
 export const getStatus = (userId) => {
     return (dispatch) => {
-        profileAPI.getStatus(userId).then(response => {
-            dispatch(setStatus(response.data));
-        });
+        profileAPI.getStatus(userId)
+            .then(response => {
+                dispatch(setStatus(response.data));
+            });
     }
 };
 
 export const updateStatus = (status) => {
     return (dispatch) => {
-        profileAPI.updateStatus(status).then(response => {
-            dispatch(setStatus(response.data));
-        });
+        profileAPI.updateStatus(status)
+            .then(response => {
+                if (response.data.resultCode === 0) {
+                    dispatch(setStatus(status));
+                }
+            });
     }
 };
 

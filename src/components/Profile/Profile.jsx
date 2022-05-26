@@ -14,8 +14,10 @@ const Profile = (props) => {
             </div>
 
             <div className={styles.wrapper}>
-                <ProfileInfo profile={props.profile} />
-                <MyPostsContainer />
+                <ProfileInfo profile={props.profile}
+                             status={props.status}
+                             updateStatus={props.updateStatus}/>
+                <MyPostsContainer/>
             </div>
         </div>
     );

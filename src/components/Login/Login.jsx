@@ -1,13 +1,12 @@
 import React from "react";
 import s from './Login.module.css';
 import {Field, reduxForm} from "redux-form";
-import {authAPI} from "../../api/api";
 import {Input} from "../common/FormsControls/FormsControls";
 import {required} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
-import {mapStateToPropsFactory} from "react-redux/es/connect/mapStateToProps";
+import formStyles from '../common/FormsControls/FormControls.module.css'
 
 
 const LoginForm = (props) => {
@@ -24,6 +23,9 @@ const LoginForm = (props) => {
             {/* МЕНЯТЬ НА ПЕРЕМЕННУЮ ИЛИ НЕТ */}
             <Field component="input" name={"rememberMe"} type="checkbox"/> Remember me
         </div>
+        {props.error && <div className={formStyles.formSummaryError}>
+            {props.error}
+        </div>}
         <div className="div">
             <button>Go in</button>
         </div>
@@ -39,7 +41,7 @@ const Login = (props) => {
     }
 
     if (props.isAuth) {
-        return <Redirect to={"/profile"} />
+        return <Redirect to={"/profile"}/>
     }
 
     return <div className={s.loginForm}>
@@ -52,4 +54,4 @@ const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth
 })
 
-export default connect(mapStateToProps, {login} )(Login);
+export default connect(mapStateToProps, {login})(Login);

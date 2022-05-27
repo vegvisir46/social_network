@@ -3,6 +3,7 @@ import styles from './Dialogs.module.css';
 import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
 import {Field, reduxForm} from "redux-form";
+import AddMessageForm from "./AddMessageForm/AddMessageForm";
 
 class Dialogs extends React.Component {
 
@@ -26,7 +27,7 @@ class Dialogs extends React.Component {
 
                     <div className={styles.messages}>
                         {messagesElements}
-                        <AddMessageReduxForm onSubmit={this.addNewMessage}/>
+                        <AddMessageForm onSubmit={this.addNewMessage}/>
                     </div>
 
                 </div>
@@ -35,22 +36,22 @@ class Dialogs extends React.Component {
     }
 }
 
-const AddMessageForm = (props) => {
-    return (
-        <form onSubmit={props.handleSubmit} className={styles.messages}>
-            <Field component="textarea"
-                   className={styles.textArea}
-                   name="newMessageBody" id="" cols="10" rows="5"
-                   placeholder="Enter your message"
-            />
-            <div className={styles.sendBtn}>
-                <button>Send Message</button>
-            </div>
-        </form>
-    )
-};
-
-const AddMessageReduxForm = reduxForm({form: "dialogAddMessageForm"})(AddMessageForm)
+// const AddMessageForm = (props) => {
+//     return (
+//         <form onSubmit={props.handleSubmit} className={styles.messages}>
+//             <Field component="textarea"
+//                    className={styles.textArea}
+//                    name="newMessageBody" id="" cols="10" rows="5"
+//                    placeholder="Enter your message"
+//             />
+//             <div className={styles.sendBtn}>
+//                 <button>Send Message</button>
+//             </div>
+//         </form>
+//     )
+// };
+//
+// const AddMessageReduxForm = reduxForm({form: "dialogAddMessageForm"})(AddMessageForm)
 
 
 // const Dialogs = (props) => {

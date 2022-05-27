@@ -1,0 +1,43 @@
+.title{
+    font-size: 20px;
+    padding: 5px 0 5px 15px;
+    color: #403f44;
+}
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+}
+
+.dialogsItems {
+    /*border: #102fad solid 1px;*/
+    padding: 10px;
+    color: #102fad;
+}
+
+.messages {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.textArea {
+    margin: 0 0 10px 0;
+    border-radius: 7px;
+    padding: 5px 10px;
+}
+
+.sendBtn {
+    display: flex;
+    justify-content: flex-end;
+}
+.sendBtn button {
+    border: #102fad solid 2px;
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 3px 15px;
+    cursor: pointer;
+}
+.sendBtn button:hover {
+    background-color: #d7d9e7;
+}

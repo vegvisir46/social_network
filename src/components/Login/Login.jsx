@@ -2,17 +2,22 @@ import React from "react";
 import s from './Login.module.css';
 import {Field, reduxForm} from "redux-form";
 import {authAPI} from "../../api/api";
+import {Input} from "../common/FormsControls/FormsControls";
+import {required} from "../../utils/validators/validators";
 
 
 const LoginForm = (props) => {
     return <form onSubmit={props.handleSubmit} action="">
         <div className="div">
-            <Field component="input" name={"login"} type="text" placeholder={"Login"}/>
+            <Field component={Input} name={"login"} type="text"
+                   validate={[required]} placeholder={"Login"}/>
         </div>
         <div className="div">
-            <Field component="input" name={"password"} type="text" placeholder={"Password"}/>
+            <Field component={Input} name={"password"} type="text"
+                   validate={[required]} placeholder={"Password"}/>
         </div>
         <div className="div">
+            {/* МЕНЯТЬ НА ПЕРЕМЕННУЮ ИЛИ НЕТ */}
             <Field component="input" name={"rememberMe"} type="checkbox"/> Remember me
         </div>
         <div className="div">

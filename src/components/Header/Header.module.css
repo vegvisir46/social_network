@@ -25,3 +25,11 @@
 .searchBtn {
     margin: 0 0 0 5px;
 }
+
+.accField {
+    display: flex;
+}
+
+.logOutBtn {
+    margin: 0 0 0 10px;
+}

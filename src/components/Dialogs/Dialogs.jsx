@@ -2,15 +2,12 @@ import React from "react";
 import styles from './Dialogs.module.css';
 import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
+import {Field, reduxForm} from "redux-form";
 
 class Dialogs extends React.Component {
-    sendMessage = () => {
-        this.props.sendMessage();
-    }
 
-    onMessageChange = (e) => {
-        let body = e.target.value;
-        this.props.onMessageChange(body);
+    addNewMessage = (values) => {
+        this.props.sendMessage(values.newMessageBody);
     }
 
     render() {
@@ -26,23 +23,34 @@ class Dialogs extends React.Component {
                     <div className={styles.dialogsItems}>
                         {dialogsElements}
                     </div>
+
                     <div className={styles.messages}>
                         {messagesElements}
-                        <textarea
-                            onChange={this.onMessageChange}
-                            className={styles.textArea}
-                            name="" id="" cols="10" rows="5"
-                            value={this.props.messagesPage.newMessageBody}/>
-                        <div className={styles.sendBtn}>
-                            <button onClick={this.sendMessage}>Send Message</button>
-                        </div>
+                        <AddMessageReduxForm onSubmit={this.addNewMessage}/>
                     </div>
+
                 </div>
             </div>
         );
     }
-
 }
+
+const AddMessageForm = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit} className={styles.messages}>
+            <Field component="textarea"
+                   className={styles.textArea}
+                   name="newMessageBody" id="" cols="10" rows="5"
+                   placeholder="Enter your message"
+            />
+            <div className={styles.sendBtn}>
+                <button>Send Message</button>
+            </div>
+        </form>
+    )
+};
+
+const AddMessageReduxForm = reduxForm({form: "dialogAddMessageForm"})(AddMessageForm)
 
 
 // const Dialogs = (props) => {

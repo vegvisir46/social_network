@@ -1,17 +1,6 @@
-.posts {
-    margin: 30px 0 10px 0;
-    display: flex;
-    flex-direction: column;
-}
-
 .newPostForm {
     display: flex;
     flex-direction: column;
-}
-
-.postsTitle{
-    font-size: 20px;
-    margin: 0 0 15px 0;
 }
 
 .postsInput {

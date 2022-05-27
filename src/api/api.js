@@ -20,7 +20,7 @@ export const usersAPI = {
         return instance.delete(`follow/${userId}`);
     },
     getProfile(userId) {
-        console.warn('Use Profile API');
+        // console.warn('Use Profile API');
         return profileAPI.getProfile(userId);
     }
 };
@@ -40,5 +40,15 @@ export const profileAPI = {
 export const authAPI = {
     me() {
         return instance.get(`auth/me`);
+    },
+    login(email, password, rememberMe) {
+        return instance.post(`auth/login`, {
+            email: email,
+            password: password,
+            rememberMe: rememberMe
+        });
+    },
+    logOut(){
+        return instance.delete(`auth/login`);
     }
 };

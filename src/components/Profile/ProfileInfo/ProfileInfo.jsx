@@ -29,9 +29,9 @@ const ProfileInfo = (props) => {
                     <div className={styles.descrItem}>
                         Web Site: {props.profile.contacts.github}
                     </div>
-                    <div className={styles.descrItem}>
+                    <div className={styles.descrItem + ' ' + styles.status}>
                         Status: <ProfileStatus status={props.status}
-                                               updateStatus={props.updateStatus}/>
+                                                        updateStatus={props.updateStatus}/>
                     </div>
                 </div>
             </div>

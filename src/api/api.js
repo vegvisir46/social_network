@@ -48,7 +48,7 @@ export const authAPI = {
             rememberMe: rememberMe
         });
     },
-    logout(){
+    logout() {
         return instance.delete(`auth/login`);
     }
 };

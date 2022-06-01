@@ -6,13 +6,7 @@ import Paginator from "../common/Paginator/Paginator";
 
 let Users = (props) => {
 
-    // let [paginatorPos, setPaginatorPos] = useState(0);
-    // let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize) + paginatorPos;
-    // let pages = [];
-    // // for (let i = 1; i <= pagesCount; i++) {
-    // for (let i = 1 + paginatorPos; i <= pagesCount; i++) {
-    //     pages.push(i);
-    // }
+
 
     return <div>
         <Paginator totalUsersCount={props.totalUsersCount}

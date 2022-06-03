@@ -13,6 +13,7 @@ import {compose} from "redux";
 import {getUsers, getPageSize, getTotalUsersCount, getCurrentPage, getIsFetching,
     getFollowingInProgress} from '../../redux/users-selector';
 
+
 class UsersContainer extends React.Component {
 
     componentDidMount() {

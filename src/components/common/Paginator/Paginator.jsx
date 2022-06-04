@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styles from './Paginator.module.css';
 
-let Paginator = (props) => {
+const Paginator = (props) => {
 
     let [paginatorPos, setPaginatorPos] = useState(0);
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize) + paginatorPos;
